@@ -7,14 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="myheader.html"/>
-	<%!
-		String makeitlower(String data)
-		{
-			return data.toLowerCase();
-		}
-	%>
-	Lower case HELLO WORLD ..! <%= makeitlower("HELLO WORLD") %>
-	<jsp:include page="myfooter.jsp"/>
+	<p>
+	<hr>
+		Last update : <%= new java.util.Date()%> 
+	</p>
 </body>
 </html>

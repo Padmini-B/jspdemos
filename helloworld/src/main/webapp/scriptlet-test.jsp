@@ -7,9 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="myheader.html"/>
 	<%
 		for(int i=1;i<=5;i++)
 			out.println("<br> Welcome - "+i);
 	%>
+	<jsp:include page="myfooter.jsp"/>
 </body>
 </html>

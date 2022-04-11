@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="myheader.html"/>
 	Convert a string to uppercase: <%= new String("hello world").toUpperCase() %>
 	<br>
 	<br>
@@ -14,5 +15,6 @@
 	<br>
 	<br>
 	Is 75 less than 70? <%= 75<70 %>
+	<jsp:include page="myfooter.jsp"/>
 </body>
 </html>
