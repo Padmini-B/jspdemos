@@ -9,9 +9,9 @@
 <body>
 	The student registration is confirmed: <%= request.getParameter("fname") %> <%= request.getParameter("lname")%> 
 	<br><br>
-	Welcome - ${param.fname},${param.lname}
+	Welcome - ${param.fname} ${param.lname}<br><br>
+	Gender - ${param.gender }
 	<br><br>
-	
 	<%
 		String[] langs=request.getParameterValues("fl");
 		if(langs!=null)
@@ -24,7 +24,10 @@
 			}
 			out.println("<ul>");
 		}
+		out.println("</ul>");
+		out.println("</ul>");
 	%>
-	
+	<br>
+	Country: ${param.country}
 </body>
 </html>
