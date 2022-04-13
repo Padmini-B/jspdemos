@@ -3,6 +3,19 @@ package com.jspdemo;
 public class Student {
 	private String fname;
 	private String lname;
+	private boolean rankholder;
+	public Student(String fname, String lname, boolean rankholder) {
+		super();
+		this.fname = fname;
+		this.lname = lname;
+		this.rankholder = rankholder;
+	}
+	public boolean isRankholder() {
+		return rankholder;
+	}
+	public void setRankholder(boolean rankholder) {
+		this.rankholder = rankholder;
+	}
 	public String getFname() {
 		return fname;
 	}
@@ -13,11 +26,6 @@ public class Student {
 		return lname;
 	}
 	public void setLname(String lname) {
-		this.lname = lname;
-	}
-	public Student(String fname, String lname) {
-		super();
-		this.fname = fname;
 		this.lname = lname;
 	}
 }

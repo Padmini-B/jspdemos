@@ -5,9 +5,9 @@
 <%@ page import="java.util.*, com.jspdemo.Student" %> 
 <%
 	List<Student> data=new ArrayList<Student>();
-	data.add(new Student("Padmini","Bollineni"));
-	data.add(new Student("Praneetha","Naradasu"));
-	data.add(new Student("Bhavitha","N"));
+	data.add(new Student("Padmini","Bollineni",false));
+	data.add(new Student("Praneetha","Naradasu",true));
+	data.add(new Student("Bhavitha","N",true));
 	pageContext.setAttribute("mystudents",data);
 
 %>   
@@ -22,11 +22,21 @@
 		<tr>
 			<th>FirstName</th>
 			<th>Lastname</th>
+			<th>RankHolder</th>
 		</tr>
 		<c:forEach var="student" items="${mystudents}" >
 			<tr>
 				<td>${student.fname}</td>
 				<td>${student.lname}</td>
+				<td>
+					<c:if test="${student.rankholder}">
+						Receive Award
+					</c:if>
+					<c:if test="${not student.rankholder}">
+						-
+					</c:if> 
+				</td>
+				
 			</tr>
 		</c:forEach>
 	</table>
